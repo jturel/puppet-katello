@@ -146,6 +146,8 @@ class katello (
   Boolean $pulp_manage_db = true,
 ) {
 
+  include katello::pulpcore
+
   package { 'katello':
     ensure => installed,
   }
